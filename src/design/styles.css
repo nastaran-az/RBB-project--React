@@ -9,6 +9,7 @@
   --menu-font: #e8dddd;
   --footer-font: rgb(221, 232, 249);
   --photo-border: #427eb7;
+  --service-back: #369b9;
 }
 
 * {
@@ -121,7 +122,7 @@ header {
   top: 60%;
   transform: translate(-50%, -50%);
 }
-.header-primaryText-R {
+.heading-primary-R {
   display: inline;
   font-size: 10rem;
   font-weight: 500;
@@ -130,21 +131,21 @@ header {
   color: var(--redR-color);
   text-shadow: 4px 6px 4px var(--logo-color);
 }
-.header-primaryText-B {
+.heading-primary-B {
   display: inline;
   font-size: 10rem;
   font-weight: 500;
   padding-right: 15px;
   text-shadow: 4px 6px 4px var(--logo-color);
 }
-.header-primaryText-C {
+.heading-primary-C {
   display: inline;
   font-size: 10rem;
   font-weight: 500;
   color: var(--B-logo-clor);
   text-shadow: 4px 6px 4px var(--logo-color);
 }
-.header-secondText {
+.heading-primarySub {
   display: inline-block;
   font-size: 2rem;
   font-weight: bold;
@@ -171,7 +172,16 @@ header {
   margin-bottom: auto;
   margin-left: auto;
 }
-/* /////////////////////////////َAbout///////////////////////////////////////////// */
+/* /////////////////////////////َABOUT///////////////////////////////////////////// */
+.about-section{
+  z-index:1;
+  background-color:#f4fafd;
+  padding-top:45rem;
+  margin-top:-30%;
+  padding-bottom:7%;
+  margin-bottom:0;
+
+}
 .row {
   max-width: 114rem;
   display: flex;
@@ -222,13 +232,13 @@ header {
   width: 48%;
   box-shadow: 1rem 2rem 4rem #395369;
   background-color: var(--redR-color);
-  border:var(--photo-border) solid 1.5px;
+  border: var(--photo-border) solid 1.5px;
   position: absolute;
   z-index: 10;
   transition: all 0.3s;
   outline-offset: 1.2rem;
-  width: 180pxx;
-  height: 220px;
+  width: 300px;
+  height: 250px;
 }
 .composition__photo--p1 {
   left: 0;
@@ -257,3 +267,137 @@ header {
 .composition:hover .composition__photo:not(:hover) {
   transform: scale(0.9);
 }
+
+/* ///////////////////////////// Services ////////////////////////////////////////// */
+.service-section {
+  height: 55rem;
+  margin-bottom: 3%;
+  padding-bottom: 0;
+  overflow: hidden;
+  background-color:rgb(3, 3, 30);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 80%);
+  position: relative;
+  z-index: 1;
+}
+.part {
+  position: relative;
+  transition: all 0.8s ease;
+  background-color: var(--about-backcolor);
+  opacity: 0.8;
+  box-shadow: 20px 20px 20px #2c3c65;
+  border: var(--photo-border) solid 2px;
+  border-radius: 3%;
+  overflow: hidden;
+  margin-top:4rem;
+}
+.part:hover {
+  transform: scale(1.08) translateY(-1.2rem);
+  box-shadow: none;
+}
+.part__pic {
+  height: 35rem;
+  clip-path: polygon(0 0, 100% 0, 100% 68%, 0 50%);
+  background-size: cover;
+  background-blend-mode: multiply;
+
+
+}
+.part__pic--img1 {
+  background-image: url(../design/pic/srvices/candle.jpg),
+    linear-gradient(
+      90deg,
+      rgba(220, 239, 255, 1) 25%,
+      rgba(202, 231, 255, 1) 41%,
+      rgba(223, 236, 252, 1) 53%
+    );
+}
+.part__pic--img2 {
+  background-image: url(../design/pic/srvices/header.jpg),
+    linear-gradient(
+      90deg,
+      rgba(220, 239, 255, 1) 25%,
+      rgba(202, 231, 255, 1) 41%,
+      rgba(223, 236, 252, 1) 53%
+    );
+}
+.part__pic--img3 {
+  background-image: url(../design/pic/srvices/istockphoto-1358842558-1024x1024.jpg),
+    linear-gradient(
+      90deg,
+      rgba(220, 239, 255, 1) 25%,
+      rgba(202, 231, 255, 1) 41%,
+      rgba(223, 236, 252, 1) 53%
+    );
+}
+.part__pic--img4 {
+  background-image: url(../design/pic/srvices/light2.jpg),
+    linear-gradient(
+      90deg,
+      rgba(220, 239, 255, 1) 25%,
+      rgba(202, 231, 255, 1) 41%,
+      rgba(223, 236, 252, 1) 53%
+    );
+}
+.part__heading {
+  top: 70%;
+  width: 100%;
+  position: absolute;
+}
+canvas {
+  filter: blur(0.6px);
+  position: absolute;
+  top: 10%;
+}
+.part__heading--p {
+  color: var(--service-back);
+  font-size: var(--service-font);
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.heading-secondry--service {
+  font-size: 5rem;
+  text-shadow: 1.5rem 1rem 1.5rem #5a637a;
+  background: linear-gradient(
+    90deg,
+    rgba(240, 248, 255, 1) 40%,
+    rgba(176, 220, 255, 1) 53%,
+    rgba(176, 220, 255, 1) 68%
+  );
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 1%;
+  padding-top:1%;
+}
+
+/* ///////////////////////////////////// FLEX for SERVICES/////////////////////////////////////////////////// */
+.service {
+  display: flex;
+  flex-direction: row;
+  margin-right: 5rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  z-index: 1;
+}
+/* /////////////////////////////////////////front side in service////////////////////////////////////////////// */
+.part {
+  width: 114rem;
+  flex-basis: 25%;
+  flex-grow: 0;
+
+  &:not(:last-child) {
+    margin-right: 6rem;
+  }
+  &:first-child {
+    margin-left: 6rem;
+  }
+}
+.firefly {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
