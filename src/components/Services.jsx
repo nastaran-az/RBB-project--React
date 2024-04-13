@@ -1,10 +1,13 @@
-import {StrictMode} from "react";
-import {createRoot} from "react-dom/client";
+import FireflyBackground from "./FireflyBackground";
 
 const Services = () => {
   return (
     <section class="service-section">
+      <h2 class="heading-secondry heading-secondry--service">Services</h2>
+
       <div class="service">
+        <FireflyBackground numFireflies={100} />
+
         <div class="part">
           <div class="part__pic">
             <div class="part__pic part__pic--img1">&nbsp;</div>
